@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ezBudget</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <h1>ezBudget</h1>
+    <div class="container">
+      <div class="bubble" id="column-left">
+        <label for="income-amount">What's your income?</label>
+        <input type="number" id="income-amount" placeholder="enter $$" />
+        <button id="income-amount-btn">Set Income</button>
+      </div>
+      <div class="bubble" id="column-right">
+        <h4>What are your expenses?</h4>
+        <label for="expense-title">Product title:</label>
+        <input
+          type="text"
+          id="expense-title"
+          placeholder="service or product title"
+        />
+
+        <label for="expense-amount">Product price:</label>
+        <input type="number" id="expense-amount" placeholder="enter $$" />
+
+        <button id="expense-amount-btn">Add Expense</button>
+      </div>
+    </div>
+    <div id="column-middle">
+      <div class="display">
+        <h3>Income $ <span id="income-display">0</span></h3>
+
+        <h3>Expenses $ <span id="expense-display">0</span></h3>
+
+        <h3>Balance $ <span id="balance-display">0</span></h3>
+      </div>
+    </div>
+
+    <div id="column-bottom">
+      <h3>Expense List:</h3>
+      <div class="list-container" id="expenses-list"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

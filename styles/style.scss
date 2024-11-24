@@ -1,0 +1,103 @@
+$font-stack: Arial, Helvetica, sans-serif;
+$light-color: rgb(255, 255, 255);
+$bubble-color: rgba(157, 223, 157, 0.721);
+$primary-color: #b64ceb;
+$secondary-color: rgb(186, 104, 169);
+$spacing: 0.5rem;
+
+@mixin flex-bubbles() {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@mixin linearGrad($color1, $color2) {
+  background: linear-gradient(to bottom, $color1, $color2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include linearGrad(rgba(241, 185, 241, 0.455), rgba(180, 247, 180, 0.458));
+  height: 100vh;
+  font-family: $font-stack;
+  line-height: 1.6;
+  text-align: center;
+  color: $secondary-color;
+  padding: $spacing;
+}
+
+h1 {
+  color: $primary-color;
+}
+
+.container {
+  // @include flex-bubbles();
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.bubble {
+  background-color: $bubble-color;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: $spacing;
+  margin: 5%;
+  border-radius: 2%;
+  gap: 0.5rem;
+  font-size: large;
+}
+
+#column-middle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.display {
+  background-color: rgba(154, 222, 214, 0.543);
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+}
+
+#column-bottom {
+  background-color: $bubble-color;
+  margin: 1rem 50rem;
+}
+
+#expenses-list {
+  background-color: $bubble-color;
+  border-radius: 2%;
+}
+
+
+button {
+  font-size: medium;
+  padding: $spacing;
+  cursor: pointer;
+  background-color: $light-color;
+  border: none;
+  border-radius: 5%;
+  color: $secondary-color;
+}
+
+input {
+  border: none;
+  padding: $spacing;
+  border-radius: 5%;
+  font-size: medium;
+}
